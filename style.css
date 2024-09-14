@@ -1,0 +1,78 @@
+/* style.css */
+
+body{
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+/* 
+universal selector '*' selects all elements
+type selector (div) selects all elements with a given name
+class selector (.input-field) selects all elements with a certain class attribute (can give HTML elements a class="class-name" so it can be targeted)
+ID selector (#login-form) selects elements with a certain id attribute (can give an HTML element a unique ID so it can be targeted)
+*/
+
+/*
+can combine selectors with a combinator
+Descendant (div p) selects all 'p' that are descendants of 'div' (appear at any level)
+Child (body > footer) selects all footer elements directly within a body tag (appear at first level only)
+
+this can be done multiple times e.g. body > article > ul > li > a
+*/
+
+/*
+Pseudo classes and elements - select based on information not directly stored in doc tree
+'pseudo class' e.g. a:visited - targets anchor tags already visited by the user.
+'pseudo element' e.g. p::first-line - targets the first line of any p tag
+*/
+
+/* specificity is important - hover over the selector to see it. more specific selectors are more important */
+
+html{
+    margin: 0px;
+}
+h1{
+    margin: 0px;
+}
+ul{
+    margin: 0px;
+}
+header{
+    margin: 0px;
+}
+
+body{
+    /* specificity (0,0,1) */
+    background-color: hotpink;
+}
+
+article > main > p {
+    width: 500px;
+    margin: 70px; /* can also define each margin (top bottom left right) like margin-top */
+    background-color: azure;
+}
+
+body > header{
+    /* applies only to header tags at the first level of a body */
+    /* specificity (0,0,2), so overrides the above block*/
+    background-color: aquamarine;
+    margin: 0px;
+}
+
+body header{
+    /* applies to any header anywhere in a body */
+    font-family: cursive;
+}
+
+#top-header{
+    font-size: xx-large;
+    color: brown;
+}
+
+footer{
+    background-color: orange;
+}
+
+p::first-letter{
+    font-size: xx-large;
+}
