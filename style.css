@@ -1,0 +1,116 @@
+/* style.css */
+
+html{
+    background-color: aliceblue;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#top-header{
+    /* Flex-box. each element in #top-header will be placed side-by-side */
+    display:flex;
+    background-color: aquamarine;
+    height: 15vh; /* set the height on viewport height, so it matches the view of the user */
+    align-items: center; /* align items (vertically) */
+    justify-content: space-between; /* align items (horizontally) */
+}
+
+#top-header > h1{
+    padding-left: 15px;
+}
+
+body > footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    height: 15vh;
+}
+
+#nav-ul{
+    display: flex;
+}
+
+#nav-ul > li{
+    display: flex;
+    align-items: center;
+    padding: 8px; /* size of elements which can't overlap */
+    margin: 4px; /*space between elements which can (?) overlap */
+    list-style-type: none; /* remove bullets */
+    border: 1px solid red;
+    border-radius: 10%;
+}
+
+#nav-ul > li img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.navbutton{
+    font-size: x-large;
+    
+}
+
+#pic1{
+    grid-area: pic1;
+}
+
+#pic2{
+    grid-area: pic2;
+}
+
+#pic3{
+    grid-area: pic3;
+}
+
+#pic4{
+    grid-area: pic4 ;
+}
+
+#random-pictures{
+    display: grid;
+    grid-template-areas: 
+    "pic1 pic2"
+    "pic3 pic4"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.gallery-pic{
+    width: 100%;
+    padding: 1px;
+}
+
+.profile-pic{
+    width: 100%;
+    padding: 1px;
+}
+
+#profile{
+    grid-area: profile;
+    font-size: large;
+}
+
+#top-pic{
+    grid-area: top-pic;
+}
+
+#bottom-pic{
+    grid-area: bottom-pic;
+}
+
+#bottom-pic-2{
+    grid-area: bottom-pic-2;
+}
+
+#main-content{
+    display: grid;
+    grid-template-areas: 
+    "profile top-pic"
+    "bottom-pic bottom-pic-2";
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
